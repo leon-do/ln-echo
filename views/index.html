@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+				<!-- https://azmind.com/bootstrap-wizard/ -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ln-echo</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+				<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- RNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1>ln-echo</h1>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
+                    	<form role="form" action="" method="post" class="f1">
+
+                    		<h3>give a satoshi, take a satoshi</h3>
+                    		<i>echoing payments using the lighting network</i>
+                    		<div class="f1-steps">
+                    			<div class="f1-progress">
+                    			    <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                    			</div>
+                    			<div class="f1-step active">
+                    				<div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                    				<p>Send</p>
+                    			</div>
+                    			<div class="f1-step">
+                    				<div class="f1-step-icon"><i class="fa fa-envelope"></i></div>
+                    				<p>Pay</p>
+                    			</div>
+                    		    <div class="f1-step">
+                    				<div class="f1-step-icon"><i class="fa fa-bitcoin"></i></div>
+                    				<p>Echo</p>
+                    			</div>
+                    		</div>
+                    		
+                    		<fieldset>
+                    		    <h4>Your Invoice:</h4>
+                    			<div class="form-group">
+                                <div class="form-group">
+																		<textarea	placeholder="lntb1230n1pwxp58..." 
+																							class="form-control" 
+																							id="userInvoice"></textarea>
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-next" id="sendNextBtn">Next</button>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <h4>Send payment to...</h4>
+                                <div class="form-group" id="serverInvoice">
+																	<!-- views/assets/js/lightning.js -->
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="button" class="btn btn-next" id="payNextBtn">Next</button>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <h4>Social media profiles:</h4>
+                                <div class="form-group">
+                                    <label class="sr-only" for="f1-facebook">Facebook</label>
+                                    <input type="text" name="f1-facebook" placeholder="Facebook..." class="f1-facebook form-control" id="f1-facebook">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="f1-twitter">Twitter</label>
+                                    <input type="text" name="f1-twitter" placeholder="Twitter..." class="f1-twitter form-control" id="f1-twitter">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="f1-google-plus">Google plus</label>
+                                    <input type="text" name="f1-google-plus" placeholder="Google plus..." class="f1-google-plus form-control" id="f1-google-plus">
+                                </div>
+                                <div class="f1-buttons">
+                                    <button type="button" class="btn btn-previous">Previous</button>
+                                    <button type="submit" class="btn btn-submit">Submit</button>
+                                </div>
+                            </fieldset>
+                    	
+                    	</form>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+				<script src="assets/js/retina-1.1.0.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>				
+				<script src="assets/js/scripts.js"></script>
+				<script src="assets/js/lightning.js"></script>
+				        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
